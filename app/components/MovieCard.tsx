@@ -1,7 +1,6 @@
 // app/components/MovieCard.tsx
 
 import Image from "next/image";
-import React from "react";
 
 type MovieCardProps = {
   title: string;
@@ -9,12 +8,12 @@ type MovieCardProps = {
   poster: string;
 };
 
-const MovieCard: React.FC<MovieCardProps> = ({ title, year, poster }) => {
+const MovieCard = ({ title, year, poster }: MovieCardProps) => {
   return (
     <div className="border border-black p-4 bg-white rounded-xl shadow-md hover:scale-110 hover:bg-rougevif my-2 hover:text-slate-100">
       <Image
-        src={`/posters/${poster}`}
-        alt={title}
+        src={poster}
+        alt={`Affiche de ${title}`}
         width={300}
         height={400}
         priority={true}
