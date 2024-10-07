@@ -7,6 +7,12 @@ export type Movie = {
   duration: string;
   year: number;
   director: string;
+  actors: string[];
+  category: "Film" | "Série" | "Docu";
+  seasons: number;
+  episodes: number;
+  genre: string;
+  tags: string[];
 };
 
 const movies: Movie[] = [
@@ -18,6 +24,24 @@ const movies: Movie[] = [
     duration: "1h56",
     year: 2000,
     director: "Christopher Nolan",
+    actors: ["Guy Pearce", "Carrie-Anne Moss", "Joe Pantoliano"],
+    category: "Film",
+    genre: "Thriller",
+    tags: ["mémoire", "vengeance", "drame", "amnésie"],
+  },
+  {
+    title: "Breaking Bad",
+    synopsis:
+      "Walter White, professeur de chimie de lycée atteint d'un cancer, se transforme en fabricant de méthamphétamine pour assurer l'avenir financier de sa famille. Il s'associe à un ancien élève, Jesse Pinkman, et leur partenariat les entraîne dans le monde dangereux du crime.",
+    poster: "breaking-bad.jpg",
+    seasons: 5,
+    episodes: 62,
+    year: 2008,
+    director: "Vince Gilligan",
+    actors: ["Bryan Cranston", "Aaron Paul", "Anna Gunn"],
+    category: "Série",
+    genre: "Drame",
+    tags: ["crime", "suspense", "chimie", "transformation"],
   },
   {
     title: "Les Trois Frères",
@@ -27,6 +51,10 @@ const movies: Movie[] = [
     duration: "1h40",
     year: 1995,
     director: "Didier Bourdon, Bernard Campan",
+    actors: ["Didier Bourdon", "Bernard Campan", "Pascal Légitimus"],
+    category: "Film",
+    genre: "Comédie",
+    tags: ["frères", "héritage", "comédie", "inconnus"],
   },
   {
     title: "Léon",
@@ -36,6 +64,10 @@ const movies: Movie[] = [
     duration: "1h43",
     year: 1994,
     director: "Luc Besson",
+    actors: ["Jean Reno", "Natalie Portman", "Gary Oldman"],
+    category: "Film",
+    genre: "Action",
+    tags: ["action", "drame", "tueur à gages", "nettoyeur"],
   },
   {
     title: "Anatomie d'une chute",
@@ -45,6 +77,10 @@ const movies: Movie[] = [
     duration: "2h31",
     year: 2023,
     director: "Justine Triet",
+    actors: ["Sandra Hüller", "Antoine Reinartz", "Swann Arlaud"],
+    category: "Film",
+    genre: "Drame",
+    tags: ["procès", "drame", "famille", "couple"],
   },
   {
     title: "Yannick",
@@ -54,6 +90,10 @@ const movies: Movie[] = [
     duration: "1h07",
     year: 2023,
     director: "Quentin Dupieux",
+    actors: ["Yannick Noah", "Philippe Katerine", "Ophélie Bau"],
+    category: "Film",
+    genre: "Comédie",
+    tags: ["théâtre", "humour", "absurde", "spectateur"],
   },
   {
     title: "Dobermann",
@@ -63,6 +103,10 @@ const movies: Movie[] = [
     duration: "1h43",
     year: 1997,
     director: "Jan Kounen",
+    actors: ["Vincent Cassel", "Tchéky Karyo", "Joey Starr"],
+    category: "Film",
+    genre: "Action",
+    tags: ["braquage", "gang", "action", "violence"],
   },
   {
     title: "Man on Fire",
@@ -72,6 +116,10 @@ const movies: Movie[] = [
     duration: "2h26",
     year: 2004,
     director: "Tony Scott",
+    actors: ["Denzel Washington", "Dakota Fanning", "Marc Anthony"],
+    category: "Film",
+    genre: "Action",
+    tags: ["enlèvement", "protection", "vengeance", "kidnapping"],
   },
   {
     title: "Training Day",
@@ -81,6 +129,10 @@ const movies: Movie[] = [
     duration: "2h01",
     year: 2001,
     director: "Antoine Fuqua",
+    actors: ["Denzel Washington", "Ethan Hawke", "Scott Glenn"],
+    category: "Film",
+    genre: "Thriller",
+    tags: ["police", "drogue", "action", "armes"],
   },
   {
     title: "Seven",
@@ -90,6 +142,10 @@ const movies: Movie[] = [
     duration: "2h10",
     year: 1996,
     director: "David Fincher",
+    actors: ["Morgan Freeman", "Brad Pitt", "Kevin Spacey"],
+    category: "Film",
+    genre: "Thriller",
+    tags: ["meurtres", "enquête", "suspense", "péchés"],
   },
   {
     title: "Le Dîner de Cons",
@@ -99,6 +155,10 @@ const movies: Movie[] = [
     duration: "1h20",
     year: 1998,
     director: "Francis Veber",
+    actors: ["Jacques Villeret", "Thierry Lhermitte", "Francis Huster"],
+    category: "Film",
+    genre: "Comédie",
+    tags: ["humour", "quiproquo", "huis clos", "con"],
   },
   {
     title: "Eternal Sunshine of the Spotless Mind",
@@ -108,6 +168,10 @@ const movies: Movie[] = [
     duration: "1h48",
     year: 2004,
     director: "Michel Gondry",
+    actors: ["Jim Carrey", "Kate Winslet", "Elijah Wood"],
+    category: "Film",
+    genre: "Drame",
+    tags: ["mémoire", "amour", "romance", "rêves"],
   },
   {
     title: "Vol au-dessus d'un nid de coucou",
@@ -117,6 +181,10 @@ const movies: Movie[] = [
     duration: "2h09",
     year: 1976,
     director: "Milos Forman",
+    actors: ["Jack Nicholson", "Louise Fletcher", "Will Sampson"],
+    category: "Film",
+    genre: "Drame",
+    tags: ["psychiatrie", "drame", "intense", "hôpital"],
   },
   {
     title: "Le Silence des Agneaux",
@@ -126,6 +194,10 @@ const movies: Movie[] = [
     duration: "1h58",
     year: 1991,
     director: "Jonathan Demme",
+    actors: ["Jodie Foster", "Anthony Hopkins", "Scott Glenn"],
+    category: "Film",
+    genre: "Thriller",
+    tags: ["suspense", "enquête", "psychologique", "cannibale"],
   },
   {
     title: "Matrix",
@@ -135,6 +207,10 @@ const movies: Movie[] = [
     duration: "2h15",
     year: 1999,
     director: "Larry Wachowski et Andy Wachowski",
+    actors: ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+    category: "Film",
+    genre: "Science-fiction",
+    tags: ["dystopie", "matrice", "action", "rébellion"],
   },
   {
     title: "La Haine",
@@ -144,6 +220,10 @@ const movies: Movie[] = [
     duration: "1h35",
     year: 1995,
     director: "Mathieu Kassovitz",
+    actors: ["Vincent Cassel", "Saïd Taghmaoui", "Hubert Koundé"],
+    category: "Film",
+    genre: "Drame",
+    tags: ["émeute", "société", "intense", "banlieue"],
   },
   {
     title: "La Ligne Verte",
@@ -153,6 +233,10 @@ const movies: Movie[] = [
     duration: "3h09",
     year: 2000,
     director: "Frank Darabont",
+    actors: ["Tom Hanks", "Michael Clarke Duncan", "David Morse"],
+    category: "Film",
+    genre: "Drame",
+    tags: ["peine de mort", "émotion", "surnaturel", "coffey"],
   },
 ];
 
