@@ -13,7 +13,7 @@ type MoviesListProps = {
 
 const MoviesList: React.FC<MoviesListProps> = ({ movies }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-4">
       {movies.map((movie, index) => (
         <MovieCard
           key={index}

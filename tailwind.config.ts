@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        rougevif: "#eb0000",
+      },
+      maxWidth: {
+        "1400": "1400px", // Ajoute une classe max-w-1500
       },
     },
   },

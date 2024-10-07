@@ -1,23 +1,29 @@
+// app/components/MovieCard.tsx
+
 import Image from "next/image";
 import React from "react";
 
 type MovieCardProps = {
   title: string;
-  year: string;
+  year: number;
   poster: string;
 };
 
 const MovieCard: React.FC<MovieCardProps> = ({ title, year, poster }) => {
   return (
-    <div className="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="border border-black p-4 bg-white rounded-xl shadow-md hover:scale-110 hover:bg-rougevif my-2 hover:text-slate-100">
       <Image
-        className="w-full h-96 object-cover"
-        src={poster}
-        alt={`${title} poster`}
+        src={`/posters/${poster}`}
+        alt={title}
+        width={300}
+        height={400}
+        priority={true}
+        className="rounded"
       />
-      <div className="p-4">
-        <h3 className="text-xl font-semibold">{title}</h3>
-        <p className="text-gray-500">{year}</p>
+      <div className="flex flex-row justify-between items-start text-xl mt-4">
+        {" "}
+        <h2 className=" font-bold">{title}</h2>
+        <p>{year}</p>
       </div>
     </div>
   );
