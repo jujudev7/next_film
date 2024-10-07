@@ -10,14 +10,14 @@ type MovieCardProps = {
 
 const MovieCard = ({ title, year, poster }: MovieCardProps) => {
   return (
-    <div className="border border-black p-4 bg-white rounded-xl shadow-md hover:scale-110 hover:bg-rougevif my-2 hover:text-slate-100">
+    <div className="border border-black p-4 mx-auto bg-white rounded-xl shadow-md hover:scale-110 hover:bg-rougevif my-2 hover:text-slate-100">
       <Image
-        src={poster}
+        src={`/posters/${poster}`}
         alt={`Affiche de ${title}`}
-        width={300}
-        height={400}
+        width={270}
+        height={360}
         priority={true}
-        className="rounded"
+        className="rounded mx-auto"
       />
       <div className="flex flex-row justify-between items-start text-xl mt-4">
         {" "}

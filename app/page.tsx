@@ -12,7 +12,7 @@ export default function Home() {
             alt={"Nextfilm logo"}
             width={300}
             height={94}
-            className="ml-4 sm:ml-0"
+            className="ml-4 sm:ml-0 hover:scale-105"
             priority={true}
           />
         </h1>
