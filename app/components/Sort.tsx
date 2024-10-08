@@ -1,26 +1,30 @@
-// "use client";
-
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 import { GiTv } from "react-icons/gi";
 import { MdLocalMovies } from "react-icons/md";
 
-export function Sort() {
+type SortProps = {
+  onSortChange: (category: string) => void; // Ajouter une prop pour la fonction de changement
+};
+
+export function Sort({ onSortChange }: SortProps) {
   return (
-    <Select>
+    <Select onValueChange={onSortChange}>
       <SelectTrigger className="w-[180px] bg-slate-200 text-lg">
         <SelectValue placeholder="Trier par..." />
       </SelectTrigger>
+
       <SelectContent>
         <SelectGroup>
-          <SelectLabel className="text-base">Trier par...</SelectLabel>
+          <SelectItem className="text-lg font-bold" value="all">
+            Trier par...
+          </SelectItem>
           <SelectItem
             className="flex items-center justify-between text-lg"
             value="films"
@@ -34,7 +38,7 @@ export function Sort() {
             className="flex items-center justify-between text-lg"
             value="series"
           >
-            <span className="flex items-center gap-3">
+            <span className="flex items-center gap-2">
               Séries
               <GiTv />
             </span>

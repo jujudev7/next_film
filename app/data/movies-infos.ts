@@ -8,7 +8,7 @@ export type Movie = {
   year: number;
   director: string;
   actors: string[];
-  category: "Film" | "Série" | "Docu";
+  category: string;
   seasons: number;
   episodes: number;
   genre: string;
@@ -28,20 +28,6 @@ const movies: Movie[] = [
     category: "Film",
     genre: "Thriller",
     tags: ["mémoire", "vengeance", "drame", "amnésie"],
-  },
-  {
-    title: "Breaking Bad",
-    synopsis:
-      "Walter White, professeur de chimie de lycée atteint d'un cancer, se transforme en fabricant de méthamphétamine pour assurer l'avenir financier de sa famille. Il s'associe à un ancien élève, Jesse Pinkman, et leur partenariat les entraîne dans le monde dangereux du crime.",
-    poster: "breaking-bad.jpg",
-    seasons: 5,
-    episodes: 62,
-    year: 2008,
-    director: "Vince Gilligan",
-    actors: ["Bryan Cranston", "Aaron Paul", "Anna Gunn"],
-    category: "Série",
-    genre: "Drame",
-    tags: ["crime", "suspense", "chimie", "transformation"],
   },
   {
     title: "Les Trois Frères",
