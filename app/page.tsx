@@ -43,7 +43,7 @@ export default function Home() {
     <main className="max-w-1400 w-3/5 sm:w-full mx-auto pt-2">
       <div className="mx-4">
         <div className="flex flex-row justify-between items-center">
-          <h1 className="text-3xl text-center font-bold mb-6">
+          <h1 className="text-3xl text-center font-bold mb-3">
             <Image
               src={"/nextfilm_logo.svg"}
               alt={"Nextfilm logo"}

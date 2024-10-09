@@ -19,10 +19,10 @@ const MovieCard = ({ title, year, poster }: MovieCardProps) => {
         priority={true}
         className="rounded mx-auto"
       />
-      <div className="flex flex-row justify-between items-start text-xl mt-4">
+      <div className="max-w-[270px] flex flex-row justify-between items-start text-xl mt-4">
         {" "}
         <h2 className=" font-bold">{title}</h2>
-        <p>{year}</p>
+        <p className="ml-1">{year}</p>
       </div>
     </div>
   );
