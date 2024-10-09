@@ -40,15 +40,15 @@ export default function Home() {
       : shuffledMovies; // Utiliser les films et séries mélangés
 
   return (
-    <main className="max-w-1400 w-3/5 sm:w-full mx-auto pt-2">
+    <main className="max-w-[1200px] mx-auto pt-2">
       <div className="mx-4">
         <div className="flex flex-row justify-between items-center">
           <h1 className="text-3xl text-center font-bold mb-3">
             <Image
               src={"/nextfilm_logo.svg"}
-              alt={"Nextfilm logo"}
-              width={300}
-              height={94}
+              alt={"Nextfilm"}
+              width={220}
+              height={69}
               className="ml-4 sm:ml-0 hover:scale-105"
               priority={true}
             />
