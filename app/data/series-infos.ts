@@ -538,7 +538,7 @@ const series: Serie[] = [
     title: "No Man’s Land",
     synopsis:
       "Un jeune homme rejoint un groupe de combattantes kurdes en Syrie pour retrouver sa sœur présumée morte, et découvre la brutalité du conflit.",
-    poster: "no-mans-land.jpg",
+    poster: "no-mans-land.webp",
     duration: "45-50 min",
     seasons: 1,
     episodes: 8,

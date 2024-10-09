@@ -332,7 +332,7 @@ const movies: Movie[] = [
     title: "Premier Contact",
     synopsis:
       "Quand des extraterrestres arrivent sur Terre, une linguiste est chargée d'établir un premier contact. Elle doit décoder leur langage avant qu'une guerre éclate.",
-    poster: "premier-contact.jpg",
+    poster: "premier-contact.webp",
     duration: "1h56",
     year: 2016,
     director: "Denis Villeneuve",

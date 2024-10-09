@@ -16,7 +16,7 @@ const MovieCard = ({ title, year, poster }: MovieCardProps) => {
         alt={`Affiche de ${title}`}
         width={220}
         height={330}
-        className="rounded-lg mx-auto object-cover"
+        className="rounded-lg"
         priority={true}
       />
       <div className="max-w-[220px] flex flex-row justify-between items-start mt-2">

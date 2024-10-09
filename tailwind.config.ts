@@ -53,9 +53,6 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
-      maxWidth: {
-        "1400": "1400px",
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
