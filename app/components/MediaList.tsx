@@ -4,6 +4,7 @@ type Media = {
   title: string;
   year: number;
   poster: string;
+  category: string;
 };
 
 type MediaListProps = {
@@ -19,6 +20,7 @@ const MediaList = ({ media }: MediaListProps) => {
           title={item.title}
           year={item.year}
           poster={item.poster}
+          category={item.category}
         />
       ))}
     </div>
