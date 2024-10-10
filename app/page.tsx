@@ -2,22 +2,22 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import MoviesList from "./components/MoviesList";
+import MediaList from "./components/MediaList";
 import { Sort } from "./components/Sort";
 import movies from "./data/movies-infos";
 import series from "./data/series-infos";
 
-type Movie = {
+type Media = {
   title: string;
   year: number;
   poster: string;
 };
 
 export default function Home() {
-  const [displayedMovies, setDisplayedMovies] = useState<Movie[]>([]); // Typage pour éviter "any"
+  const [displayedMedia, setDisplayedMedia] = useState<Media[]>([]); // Typage pour éviter "any"
 
   // Fonction pour mélanger un tableau
-  const shuffleArray = (array: Movie[]): Movie[] => {
+  const shuffleArray = (array: Media[]): Media[] => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -28,17 +28,17 @@ export default function Home() {
   // Fonction pour changer la catégorie sélectionnée
   const handleSortChange = (category: string) => {
     if (category === "films") {
-      setDisplayedMovies(shuffleArray([...movies])); // Mélanger les films
+      setDisplayedMedia(shuffleArray([...movies])); // Mélanger les films
     } else if (category === "series") {
-      setDisplayedMovies(shuffleArray([...series])); // Mélanger les séries
+      setDisplayedMedia(shuffleArray([...series])); // Mélanger les séries
     } else {
-      setDisplayedMovies(shuffleArray([...movies, ...series])); // Mélanger les deux
+      setDisplayedMedia(shuffleArray([...movies, ...series])); // Mélanger les deux
     }
   };
 
   // Mélanger les films et séries une seule fois au montage initial
   useEffect(() => {
-    setDisplayedMovies(shuffleArray([...movies, ...series]));
+    setDisplayedMedia(shuffleArray([...movies, ...series]));
   }, []);
 
   return (
@@ -57,8 +57,9 @@ export default function Home() {
           </h1>
           <Sort onSortChange={handleSortChange} />
         </div>
-        <MoviesList movies={displayedMovies} />
+        <MediaList media={displayedMedia} />
       </div>
     </main>
   );
 }
+
