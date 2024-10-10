@@ -9,8 +9,6 @@ export type Movie = {
   director: string;
   actors: string[];
   category: string;
-  seasons: number;
-  episodes: number;
   genre: string;
   tags: string[];
 };

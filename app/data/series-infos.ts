@@ -51,7 +51,7 @@ const series: Serie[] = [
     title: "Oz",
     synopsis:
       "Une plongée dans l'univers violent et brutal de la prison de haute sécurité d'Oswald State Correctional Facility.",
-    poster: "oz.jpg",
+    poster: "oz.webp",
     seasons: 6,
     episodes: 56,
     year: 1997,
