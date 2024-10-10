@@ -1,43 +1,45 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react"; // Importer useEffect
+import { useEffect, useState } from "react";
 import MoviesList from "./components/MoviesList";
 import { Sort } from "./components/Sort";
 import movies from "./data/movies-infos";
 import series from "./data/series-infos";
 
-export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"); // État pour la catégorie sélectionnée
-  const [shuffledMovies, setShuffledMovies] = useState<string[]>([]); // État pour les films et séries mélangés
+type Movie = {
+  title: string;
+  year: number;
+  poster: string;
+};
 
-  // Fonction pour changer la catégorie sélectionnée
-  const handleSortChange = (category: string) => {
-    setSelectedCategory(category);
-  };
+export default function Home() {
+  const [displayedMovies, setDisplayedMovies] = useState<Movie[]>([]); // Typage pour éviter "any"
 
   // Fonction pour mélanger un tableau
-  const shuffleArray = (array: string[]) => {
+  const shuffleArray = (array: Movie[]): Movie[] => {
     for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1)); // Choisir un index aléatoire
-      [array[i], array[j]] = [array[j], array[i]]; // Échanger les éléments
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
   };
 
-  // Utiliser useEffect pour mélanger les films et séries une fois lors du premier rendu
-  useEffect(() => {
-    const combined = [...movies, ...series];
-    setShuffledMovies(shuffleArray(combined));
-  }, []); // Ne s'exécute qu'une fois au montage
+  // Fonction pour changer la catégorie sélectionnée
+  const handleSortChange = (category: string) => {
+    if (category === "films") {
+      setDisplayedMovies(shuffleArray([...movies])); // Mélanger les films
+    } else if (category === "series") {
+      setDisplayedMovies(shuffleArray([...series])); // Mélanger les séries
+    } else {
+      setDisplayedMovies(shuffleArray([...movies, ...series])); // Mélanger les deux
+    }
+  };
 
-  // Filtrer les films ou séries en fonction de la catégorie sélectionnée
-  const filteredMovies =
-    selectedCategory === "films"
-      ? movies
-      : selectedCategory === "series"
-      ? series
-      : shuffledMovies; // Utiliser les films et séries mélangés
+  // Mélanger les films et séries une seule fois au montage initial
+  useEffect(() => {
+    setDisplayedMovies(shuffleArray([...movies, ...series]));
+  }, []);
 
   return (
     <main className="max-w-[1200px] mx-auto pt-2">
@@ -49,15 +51,13 @@ export default function Home() {
               alt={"Nextfilm"}
               width={220}
               height={69}
-              className="ml-4 sm:ml-0 hover:scale-105"
+              className="sm:ml-0 hover:scale-105"
               priority={true}
             />
           </h1>
-          <Sort onSortChange={handleSortChange} />{" "}
-          {/* Passer la fonction à Sort */}
+          <Sort onSortChange={handleSortChange} />
         </div>
-        <MoviesList movies={filteredMovies} />{" "}
-        {/* Passer les films ou séries filtrés */}
+        <MoviesList movies={displayedMovies} />
       </div>
     </main>
   );
