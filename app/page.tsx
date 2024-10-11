@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import Logo from "./components/Logo";
 import MediaList from "./components/MediaList";
 import { Sort } from "./components/Sort";
 import movies from "./data/movies-infos";
@@ -45,16 +45,7 @@ export default function Home() {
     <main className="max-w-[1200px] mx-auto pt-2">
       <div className="mx-4">
         <div className="flex flex-row justify-between items-center">
-          <h1 className="text-3xl text-center font-bold mb-3">
-            <Image
-              src={"/nextfilm_logo.svg"}
-              alt={"Nextfilm"}
-              width={220}
-              height={69}
-              className="sm:ml-0 hover:scale-105"
-              priority={true}
-            />
-          </h1>
+          <Logo />
           <Sort onSortChange={handleSortChange} />
         </div>
         <MediaList media={displayedMedia} />
@@ -62,4 +53,3 @@ export default function Home() {
     </main>
   );
 }
-

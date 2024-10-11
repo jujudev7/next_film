@@ -407,15 +407,22 @@ const movies: Movie[] = [
   {
     title: "Un p'tit truc en plus",
     synopsis:
-      "Une comédie romantique décalée où un homme découvre que son entourage perçoit quelque chose d'étrange chez lui, tout en cherchant l'amour.",
+      'En cavale après un braquage raté, Paulo et son père "La Fraise", se cachent dans une colonie de vacances pour jeunes en situation de handicap, en se faisant passer pour un pensionnaire et son éducateur. Au fil des jours, ils vivent une expérience humaine bouleversante qui les transforme profondément.',
     poster: "un-ptit-truc-en-plus.jpg",
     duration: "1h30",
-    year: 2013,
+    year: 2024,
     director: "Pascal Thomas",
-    actors: ["Jean-Paul Rouve", "Alice Taglioni", "Melanie Doutey"],
+    actors: [
+      "Artus",
+      "Clovis Cornillac",
+      "Alice Belaïdi",
+      "Marc Riso",
+      "Céline Groussard",
+      "Arnaud Toupense",
+    ],
     category: "film",
-    genre: "Comédie romantique",
-    tags: ["amour", "comédie", "romance", "décalé"],
+    genre: "Comédie",
+    tags: ["humour", "handicap", "trisomie", "vacances"],
   },
   {
     title: "Mystic River",

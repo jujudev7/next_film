@@ -13,7 +13,7 @@ type MediaListProps = {
 
 const MediaList = ({ media }: MediaListProps) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {media.map((item, index) => (
         <MediaCard
           key={index}
