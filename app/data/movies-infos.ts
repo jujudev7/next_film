@@ -226,7 +226,7 @@ const movies: Movie[] = [
     title: "Bienvenue à Gattaca",
     synopsis:
       "Dans un futur où l'eugénisme est la norme, Vincent Freeman, un homme né naturellement, rêve de voyager dans l'espace. Pour cela, il doit déjouer le système en usurpant l'identité d'un individu génétiquement parfait.",
-    poster: "gattaca.jpg",
+    poster: "bienvenue-a-gattaca.jpg",
     duration: "1h46",
     year: 1997,
     director: "Andrew Niccol",
