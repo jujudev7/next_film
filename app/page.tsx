@@ -1,53 +1,38 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Logo from "./components/Logo";
 import MediaList from "./components/MediaList";
-import { Sort } from "./components/Sort";
-import movies from "./data/movies-infos";
+import movies from "./data/movies-infos"; // Assurez-vous que les chemins d'importation sont corrects
 import series from "./data/series-infos";
 
+// Type Media
 type Media = {
   title: string;
   year: number;
   poster: string;
+  category: string;
 };
 
 export default function Home() {
-  const [displayedMedia, setDisplayedMedia] = useState<Media[]>([]); // Typage pour éviter "any"
-
-  // Fonction pour mélanger un tableau
-  const shuffleArray = (array: Media[]): Media[] => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  };
-
-  // Fonction pour changer la catégorie sélectionnée
-  const handleSortChange = (category: string) => {
-    if (category === "films") {
-      setDisplayedMedia(shuffleArray([...movies])); // Mélanger les films
-    } else if (category === "series") {
-      setDisplayedMedia(shuffleArray([...series])); // Mélanger les séries
-    } else {
-      setDisplayedMedia(shuffleArray([...movies, ...series])); // Mélanger les deux
-    }
-  };
+  const [displayedMedia, setDisplayedMedia] = useState<Media[]>([]);
 
   // Mélanger les films et séries une seule fois au montage initial
   useEffect(() => {
+    const shuffleArray = (array: Media[]): Media[] => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    };
+
     setDisplayedMedia(shuffleArray([...movies, ...series]));
   }, []);
 
   return (
     <main className="max-w-[1200px] mx-auto pt-2">
       <div className="mx-4">
-        <div className="flex flex-row justify-between items-center">
-          <Logo />
-          <Sort onSortChange={handleSortChange} />
-        </div>
+        <div className="flex flex-row justify-between items-center"></div>
         <MediaList media={displayedMedia} />
       </div>
     </main>
