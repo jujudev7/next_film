@@ -15,6 +15,8 @@ type Media = {
   year: number;
   duration: string;
   poster: string;
+  actors: string[];
+  director: string[];
   category: string;
   synopsis: string;
   seasons: number;
@@ -103,11 +105,32 @@ const MediaDetail = () => {
                 </div>
               )}
               <div>
-                <span className="kalam-bold text-2xl text-orange-500 my-2">
-                  Acteurs principaux :
-                </span>
-                <br />
-                <span className="text-lg mb-8">{media.actors.join(", ")}</span>
+                <div>
+                  <span className="kalam-bold text-xl text-orange-500 my-2">
+                    Acteurs principaux
+                  </span>
+                  <br />
+                  <span className="text-lg mb-8">
+                    {media.actors.join(", ")}
+                  </span>
+                </div>
+                <div className="my-6">
+                  <span className="kalam-bold text-xl text-orange-500 mb-2">
+                    {media.director.length > 1 ? "Réalisateurs" : "Réalisateur"}
+                  </span>
+                  <br />
+                  <span className="text-lg mb-8">
+                    {media.director.join(", ")}
+                  </span>
+                </div>
+                <div className="my-6">
+                  <Button className="cursor-default text-black bg-orange-500 rounded hover:bg-orange-500">
+                    Mots-clés
+                  </Button>
+                  <span className="font-mono mb-8 ml-4">
+                    {media.tags.join(", ")}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
