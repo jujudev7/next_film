@@ -51,13 +51,13 @@ const movies: Movie[] = [
     actors: ["Jean Reno", "Natalie Portman", "Gary Oldman"],
     category: "film",
     genre: "Action",
-    tags: ["action", "drame", "tueur à gages", "nettoyeur"],
+    tags: ["tueur à gages", "nettoyeur", "Mathilda"],
   },
   {
     title: "Anatomie d'une chute",
     synopsis:
       "Sandra, Samuel et leur fils malvoyant de 11 ans, Daniel, vivent depuis un an à la montagne. Un jour, Samuel est retrouvé mort. On assiste au procès de la mère, véritable dissection du couple.",
-    poster: "anatomie-chute.jpg",
+    poster: "anatomie-dune-chute.jpg",
     duration: "2h31",
     year: 2023,
     director: ["Justine Triet"],
@@ -103,7 +103,7 @@ const movies: Movie[] = [
     actors: ["Denzel Washington", "Dakota Fanning", "Marc Anthony"],
     category: "film",
     genre: "Action",
-    tags: ["enlèvement", "protection", "vengeance", "kidnapping"],
+    tags: ["kidnapping", "protection", "vengeance"],
   },
   {
     title: "Training Day",
@@ -181,7 +181,7 @@ const movies: Movie[] = [
     actors: ["Jodie Foster", "Anthony Hopkins", "Scott Glenn"],
     category: "film",
     genre: "Thriller",
-    tags: ["suspense", "enquête", "psychologique", "cannibale"],
+    tags: ["cannibale", "psychologie", "enquête"],
   },
   {
     title: "Matrix",
@@ -207,7 +207,7 @@ const movies: Movie[] = [
     actors: ["Vincent Cassel", "Saïd Taghmaoui", "Hubert Koundé"],
     category: "film",
     genre: "Drame",
-    tags: ["émeute", "société", "intense", "banlieue"],
+    tags: ["émeute", "société", "intense", ],
   },
   {
     title: "La Ligne Verte",
@@ -220,7 +220,7 @@ const movies: Movie[] = [
     actors: ["Tom Hanks", "Michael Clarke Duncan", "David Morse"],
     category: "film",
     genre: "Drame",
-    tags: ["peine de mort", "émotion", "surnaturel", "coffey"],
+    tags: ["peine de mort", "surnaturel", "fatigué"],
   },
   {
     title: "Bienvenue à Gattaca",
@@ -233,7 +233,7 @@ const movies: Movie[] = [
     actors: ["Ethan Hawke", "Uma Thurman", "Jude Law"],
     category: "film",
     genre: "Science-fiction",
-    tags: ["eugénisme", "futur", "espace", "identité"],
+    tags: ["eugénisme", "dystopie", "espace", "identité"],
   },
   {
     title: "Funny Games",
@@ -246,7 +246,7 @@ const movies: Movie[] = [
     actors: ["Susanne Lothar", "Ulrich Mühe", "Arno Frisch"],
     category: "film",
     genre: "Thriller",
-    tags: ["violence", "suspense", "sadisme", "otage"],
+    tags: ["violence", "kidnapping", "sadisme", "otage"],
   },
   {
     title: "5150, rue des Ormes",
@@ -259,7 +259,7 @@ const movies: Movie[] = [
     actors: ["Marc-André Grondin", "Normand D'Amour", "Sonia Vachon"],
     category: "film",
     genre: "Thriller",
-    tags: ["psychologique", "séquestration", "échecs", "famille"],
+    tags: ["psychologique", "séquestration", "échecs"],
   },
   {
     title: "Polisse",
@@ -285,7 +285,7 @@ const movies: Movie[] = [
     actors: ["Kelly Reilly", "Michael Fassbender", "Jack O'Connell"],
     category: "film",
     genre: "Horreur",
-    tags: ["survie", "violence", "adolescents", "forêt"],
+    tags: ["violence", "adolescents", "forêt", "survie"],
   },
   {
     title: "C'est arrivé près de chez vous",
@@ -298,7 +298,7 @@ const movies: Movie[] = [
     actors: ["Benoît Poelvoorde", "Rémy Belvaux", "André Bonzel"],
     category: "film",
     genre: "Comédie noire",
-    tags: ["tueur en série", "satire", "faux documentaire", "humour noir"],
+    tags: ["tueur en série", "humour noir", "faux documentaire"],
   },
   {
     title: "Adam's Apples",
@@ -337,7 +337,7 @@ const movies: Movie[] = [
     actors: ["Amy Adams", "Jeremy Renner", "Forest Whitaker"],
     category: "film",
     genre: "Science-fiction",
-    tags: ["extraterrestres", "communication", "langage", "ovni"],
+    tags: ["extraterrestres", "communication", "ovni"],
   },
   {
     title: "Shutter Island",
@@ -350,7 +350,7 @@ const movies: Movie[] = [
     actors: ["Leonardo DiCaprio", "Mark Ruffalo", "Ben Kingsley"],
     category: "film",
     genre: "Thriller",
-    tags: ["mystère", "psychologie", "hôpital psychiatrique", "disparition"],
+    tags: ["mystère", "psychologie", "hôpital"],
   },
   {
     title: "Interstellar",
@@ -363,7 +363,7 @@ const movies: Movie[] = [
     actors: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
     category: "film",
     genre: "Science-fiction",
-    tags: ["espace", "trou de ver", "exploration", "planète"],
+    tags: ["espace", "trou de ver", "planète"],
   },
   {
     title: "Hunger Games",
@@ -376,7 +376,7 @@ const movies: Movie[] = [
     actors: ["Jennifer Lawrence", "Josh Hutcherson", "Liam Hemsworth"],
     category: "film",
     genre: "Science-fiction",
-    tags: ["dystopie", "survie", "télévision", "adolescents"],
+    tags: ["dystopie", "survie", "rébellion"],
   },
   {
     title: "Je verrai toujours vos visages",
@@ -389,7 +389,7 @@ const movies: Movie[] = [
     actors: ["Adèle Exarchopoulos", "Gilles Lellouche", "Elodie Bouchez"],
     category: "film",
     genre: "Drame",
-    tags: ["justice", "victimes", "réconciliation", "émotion"],
+    tags: ["justice", "victimes", "réconciliation"],
   },
   {
     title: "Cuisine et Dépendances",
@@ -402,7 +402,7 @@ const movies: Movie[] = [
     actors: ["Zabou Breitman", "Sam Karmann", "Jean-Pierre Bacri"],
     category: "film",
     genre: "Comédie dramatique",
-    tags: ["dîner", "tensions", "huis clos", "amitié"],
+    tags: ["dîner", "huis clos", "amis", "comédie"],
   },
   {
     title: "Un p'tit truc en plus",
@@ -435,7 +435,7 @@ const movies: Movie[] = [
     actors: ["Sean Penn", "Tim Robbins", "Kevin Bacon"],
     category: "film",
     genre: "Drame",
-    tags: ["meurtre", "traumatismes", "enfance", "justice"],
+    tags: ["meurtre", "traumatisme", "enfance", "justice"],
   },
   {
     title: "BAC Nord",
@@ -461,7 +461,7 @@ const movies: Movie[] = [
     actors: ["James McAvoy", "Anya Taylor-Joy", "Betty Buckley"],
     category: "film",
     genre: "Thriller",
-    tags: ["psychologique", "personnalités", "enlèvement", "suspense"],
+    tags: ["psychologie", "personnalités", "kidnapping"],
   },
   {
     title: "Argo",
@@ -487,7 +487,7 @@ const movies: Movie[] = [
     actors: ["Patrick Bruel", "Valérie Benguigui", "Charles Berling"],
     category: "film",
     genre: "Comédie",
-    tags: ["dîner", "dispute", "prénom", "famille"],
+    tags: ["dîner", "dispute", "famille", "blague"],
   },
   {
     title: "Les Bronzés font du ski",
@@ -500,7 +500,7 @@ const movies: Movie[] = [
     actors: ["Michel Blanc", "Gérard Jugnot", "Josiane Balasko"],
     category: "film",
     genre: "Comédie",
-    tags: ["ski", "vacances", "humour", "culte"],
+    tags: ["ski", "vacances", "humour", "splendide"],
   },
   {
     title: "Les Visiteurs",
@@ -526,7 +526,7 @@ const movies: Movie[] = [
     actors: ["Olivia Bonamy", "Michaël Cohen"],
     category: "film",
     genre: "Horreur",
-    tags: ["terreur", "maison", "intrusion", "suspense"],
+    tags: ["terreur", "maison", "intrusion", "Roumanie"],
   },
   {
     title: "Titanic",
@@ -539,7 +539,7 @@ const movies: Movie[] = [
     actors: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
     category: "film",
     genre: "Drame",
-    tags: ["tragédie", "paquebot", "amour", "sauvetage"],
+    tags: ["tragédie", "paquebot", "amour", "iceberg"],
   },
   {
     title: "Forrest Gump",

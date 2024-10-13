@@ -30,7 +30,7 @@ const series: Serie[] = [
     actors: ["Dominic West", "Idris Elba", "Michael K. Williams"],
     category: "serie",
     genre: "Drame",
-    tags: ["crime", "police", "société", "corruption"],
+    tags: ["drogue", "police", "crime", "corruption"],
   },
   {
     title: "Manhunt",
@@ -45,7 +45,7 @@ const series: Serie[] = [
     actors: ["Sam Worthington", "Paul Bettany", "Jeremy Bobb"],
     category: "serie",
     genre: "Thriller",
-    tags: ["crime", "suspense", "enquête", "FBI"],
+    tags: ["enquête", "bombe", "FBI", "suspense"],
   },
   {
     title: "Oz",
@@ -90,7 +90,7 @@ const series: Serie[] = [
     actors: ["Donald Glover", "Brian Tyree Henry", "LaKeith Stanfield"],
     category: "serie",
     genre: "Comédie dramatique",
-    tags: ["musique", "rap", "culture", "comédie"],
+    tags: ["société", "rap", "comédie", "décalé"],
   },
   {
     title: "Peaky Blinders",
@@ -125,7 +125,7 @@ const series: Serie[] = [
   {
     title: "The Office",
     synopsis:
-      "La vie quotidienne au bureau de la société Dunder Mifflin, dirigée par l'excentrique Michael Scott, avec une équipe attachante et hilarante.",
+      "La vie quotidienne au bureau de la société Dunder Mifflin, dirigée par l'excentrique Michael Scott, qui cultive le malaise comme personne auprès de ses employés aussi attachants qu'hilarants.",
     poster: "the-office.jpg",
     seasons: 9,
     episodes: 201,
@@ -135,7 +135,7 @@ const series: Serie[] = [
     actors: ["Steve Carell", "John Krasinski", "Rainn Wilson"],
     category: "serie",
     genre: "Comédie",
-    tags: ["bureau", "humour", "collègues", "mockumentary"],
+    tags: ["bureau", "humour", "collègues", "malaise"],
   },
   {
     title: "Ted Lasso",
@@ -150,7 +150,7 @@ const series: Serie[] = [
     actors: ["Jason Sudeikis", "Hannah Waddingham", "Brett Goldstein"],
     category: "serie",
     genre: "Comédie",
-    tags: ["sport", "optimisme", "entraîneur", "humour"],
+    tags: ["foot", "entraîneur", "humour", "optimisme"],
   },
   {
     title: "Calls",
@@ -165,7 +165,7 @@ const series: Serie[] = [
     actors: ["Pedro Pascal", "Lily Collins", "Nick Jonas"],
     category: "serie",
     genre: "Thriller",
-    tags: ["mystère", "téléphone", "expérimental", "suspense"],
+    tags: ["mystère", "téléphone", "suspense"],
   },
   {
     title: "Altered Carbon",
@@ -180,7 +180,7 @@ const series: Serie[] = [
     actors: ["Joel Kinnaman", "Anthony Mackie", "Martha Higareda"],
     category: "serie",
     genre: "Science-fiction",
-    tags: ["futur", "immortalité", "enquête", "cyberpunk"],
+    tags: ["dystopie", "immortalité", "cyberpunk"],
   },
   {
     title: "Mindhunter",
@@ -196,7 +196,7 @@ const series: Serie[] = [
     actors: ["Jonathan Groff", "Holt McCallany", "Anna Torv"],
     category: "serie",
     genre: "Thriller",
-    tags: ["crime", "psychologie", "FBI", "tueurs en série"],
+    tags: ["tueurs en série", "psychologie", "FBI", "crime"],
   },
   {
     title: "Squid Game",
@@ -212,7 +212,7 @@ const series: Serie[] = [
     actors: ["Lee Jung-jae", "Park Hae-soo", "Wi Ha-joon"],
     category: "serie",
     genre: "Thriller",
-    tags: ["survie", "jeu", "société", "violence"],
+    tags: ["survie", "jeu", "argent", "stratégie"],
   },
   {
     title: "Maniac",
@@ -227,7 +227,7 @@ const series: Serie[] = [
     actors: ["Emma Stone", "Jonah Hill", "Justin Theroux"],
     category: "serie",
     genre: "Comédie dramatique",
-    tags: ["expérimental", "psychologique", "essai clinique", "humour"],
+    tags: ["expérimental", "psychologique", "humour"],
   },
   {
     title: "The OA",
@@ -259,7 +259,7 @@ const series: Serie[] = [
     actors: ["Alex Lawther", "Jessica Barden", "Naomi Ackie"],
     category: "serie",
     genre: "Comédie dramatique",
-    tags: ["adolescence", "fugue", "psychopathie", "humour noir"],
+    tags: ["fugue", "psychopathe", "humour noir"],
   },
   {
     title: "Brooklyn Nine-Nine",
@@ -275,7 +275,7 @@ const series: Serie[] = [
     actors: ["Andy Samberg", "Terry Crews", "Andre Braugher"],
     category: "serie",
     genre: "Comédie",
-    tags: ["police", "humour", "enquête", "équipe"],
+    tags: ["police", "humour", "enquête"],
   },
   {
     title: "The Bear",
@@ -307,7 +307,7 @@ const series: Serie[] = [
     actors: ["Elisabeth Moss", "Yvonne Strahovski", "Joseph Fiennes"],
     category: "serie",
     genre: "Drame",
-    tags: ["dystopie", "féminisme", "résistance", "totalitarisme"],
+    tags: ["dystopie", "patriarcat", "résistance"],
   },
   {
     title: "3%",
@@ -355,7 +355,7 @@ const series: Serie[] = [
     actors: ["Jared Harris", "Stellan Skarsgård", "Emily Watson"],
     category: "serie",
     genre: "Drame historique",
-    tags: ["catastrophe", "nucléaire", "URSS", "répercussions"],
+    tags: ["catastrophe", "nucléaire", "URSS", "politique"],
   },
   {
     title: "Criminal",
@@ -371,7 +371,7 @@ const series: Serie[] = [
     actors: ["David Tennant", "Katherine Kelly", "Lee Ingleby"],
     category: "serie",
     genre: "Policier",
-    tags: ["interrogatoire", "enquête", "psychologie", "police"],
+    tags: ["interrogatoire", "enquête", "psychologie"],
   },
   {
     title: "Dix pour cent",
@@ -403,7 +403,7 @@ const series: Serie[] = [
     actors: ["Frédéric Pierrot", "Mélanie Thierry", "Clémence Poésy"],
     category: "serie",
     genre: "Drame",
-    tags: ["psychologie", "thérapie", "introspection", "post-attentats"],
+    tags: ["psychanalyse", "traumatisme", "post-attentat"],
   },
   {
     title: "H",
@@ -419,13 +419,13 @@ const series: Serie[] = [
     actors: ["Jamel Debbouze", "Éric Judor", "Ramzy Bedia"],
     category: "serie",
     genre: "Comédie",
-    tags: ["hôpital", "humour", "médecine", "absurde"],
+    tags: ["humour", "hôpital", "absurde"],
   },
   {
     title: "Le Bureau des Légendes",
     synopsis:
       "Les agents de la DGSE, la principale agence de renseignement française, mènent des missions sous couverture tout en jonglant avec les risques de leur double vie.",
-    poster: "lbdl.jpg",
+    poster: "le-bureau-des-legendes.jpg",
     duration: "50-55 min",
     seasons: 5,
     episodes: 50,
@@ -435,7 +435,7 @@ const series: Serie[] = [
     actors: ["Mathieu Kassovitz", "Sara Giraudeau", "Jean-Pierre Darroussin"],
     category: "serie",
     genre: "Thriller",
-    tags: ["espionnage", "politique", "drame", "secret"],
+    tags: ["espionnage", "DGSE", "agents", "Malotru"],
   },
   {
     title: "Platane",
@@ -499,7 +499,7 @@ const series: Serie[] = [
     actors: ["Bryce Dallas Howard", "Daniel Kaluuya", "Jon Hamm"],
     category: "serie",
     genre: "Science-fiction",
-    tags: ["technologie", "futur", "société", "dystopie"],
+    tags: ["dystopie", "technologie", "société"],
   },
   {
     title: "LOST",
@@ -531,10 +531,10 @@ const series: Serie[] = [
     actors: ["Rami Malek", "Christian Slater", "Carly Chaikin"],
     category: "serie",
     genre: "Thriller",
-    tags: ["hackers", "technologie", "psychologie", "anarchie"],
+    tags: ["hacker", "technologie", "anarchie"],
   },
   {
-    title: "No Man’s Land",
+    title: "No Man's Land",
     synopsis:
       "Un jeune homme rejoint un groupe de combattantes kurdes en Syrie pour retrouver sa sœur présumée morte, et découvre la brutalité du conflit.",
     poster: "no-mans-land.webp",
@@ -563,7 +563,7 @@ const series: Serie[] = [
     actors: ["Melvil Poupaud", "Daphné Patakia", "Michel Vuillermoz"],
     category: "serie",
     genre: "Comédie de science-fiction",
-    tags: ["extraterrestres", "France", "années 70", "complot"],
+    tags: ["extraterrestres", "complot", "années 70"],
   },
   {
     title: "Kaamelott",

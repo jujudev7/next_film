@@ -108,7 +108,7 @@ const MediaDetail = () => {
                 </span>
               </div>
               <div className="my-6">
-                <Button className="cursor-default text-black bg-orange-500 rounded hover:bg-orange-500">
+                <Button className="cursor-default text-black bg-orange-500 rounded hover:bg-orange-500 h-8 py-0">
                   Mots-clés
                 </Button>
                 <span className="font-mono mb-8 ml-4">
