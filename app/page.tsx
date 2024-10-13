@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import MediaList from "./components/MediaList";
-import movies from "./data/movies-infos"; // Assurez-vous que les chemins d'importation sont corrects
+import { useMedia } from "./context/MediaContext"; // Importation du contexte
+import movies from "./data/movies-infos";
 import series from "./data/series-infos";
 
 // Type Media
@@ -14,20 +15,30 @@ type Media = {
 };
 
 export default function Home() {
+  const { filteredMedia } = useMedia(); // Récupère filteredMedia du contexte
   const [displayedMedia, setDisplayedMedia] = useState<Media[]>([]);
 
-  // Mélanger les films et séries une seule fois au montage initial
-  useEffect(() => {
-    const shuffleArray = (array: Media[]): Media[] => {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    };
+  // Fonction pour mélanger les tableaux
+  const shuffleArray = (array: Media[]): Media[] => {
+    const shuffled = [...array]; // Copie pour éviter de modifier l'original
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
 
+  // Mélanger tous les médias au premier chargement (films + séries)
+  useEffect(() => {
     setDisplayedMedia(shuffleArray([...movies, ...series]));
-  }, []);
+  }, []); // Se déclenche uniquement au premier rendu
+
+  // Mélanger à chaque fois que filteredMedia change
+  useEffect(() => {
+    if (filteredMedia.length > 0) {
+      setDisplayedMedia(shuffleArray(filteredMedia));
+    }
+  }, [filteredMedia]); // Se déclenche lorsque le filtre change
 
   return (
     <main className="max-w-[1200px] mx-auto pt-2">

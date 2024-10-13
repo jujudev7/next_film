@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navbar from "./components/Navbar";
+import { MediaProvider } from "./context/MediaContext"; // Importation du contexte
 import "./globals.css";
 
 const geistSans = localFont({
@@ -30,8 +31,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
         <div className="max-w-[1200px] mx-auto pt-2">
-          <Navbar />
-          {children}
+          <MediaProvider>
+            {" "}
+            {/* Enveloppe tout avec MediaProvider */}
+            <Navbar />
+            {children}
+          </MediaProvider>
         </div>
       </body>
     </html>

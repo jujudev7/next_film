@@ -6,16 +6,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoHome } from "react-icons/io5";
+import { useMedia } from "../context/MediaContext";
 import { Sort } from "./Sort";
 
-// Définition des props du composant Navbar
-const Navbar = ({
-  onSortChange,
-}: {
-  onSortChange: (category: string) => void;
-}) => {
+const Navbar = () => {
   const pathname = usePathname(); // Utilisation de usePathname pour obtenir le chemin actuel
   const [isHomePage, setIsHomePage] = useState(true); // État local pour vérifier si nous sommes sur la page d'accueil
+  const { handleSortChange } = useMedia(); // Récupère handleSortChange du contexte
 
   useEffect(() => {
     // Vérifier si nous sommes sur la page d'accueil après que le composant ait été monté
@@ -37,7 +34,7 @@ const Navbar = ({
         </h1>
       </Link>
       {isHomePage ? (
-        <Sort onSortChange={onSortChange} />
+        <Sort onSortChange={handleSortChange} />
       ) : (
         <Link href="/">
           <Button className="flex items-center justify-center px-4 py-2 mr-3 text-black bg-slate-300 rounded transition hover:text-white hover:bg-blue-700">
