@@ -60,7 +60,7 @@ const MediaDetail = () => {
             </div>
           </div>
           <div className="text-white flex-grow">
-            <h1 className="text-4xl font-bold mb-4">{media.title}</h1>
+            <h1 className="text-4xl font-bold">{media.title}</h1>
             {media.category === "film" && (
               <div className="flex flex-row my-6 gap-3">
                 <Button className="flex items-center justify-center cursor-default px-8 py-6 text-lg text-white bg-blue-700 rounded hover:bg-blue-700">
@@ -72,24 +72,36 @@ const MediaDetail = () => {
                 </Button>
               </div>
             )}
-            <p className="text-lg my-6">{media.synopsis}</p>
 
             {media.category === "serie" && (
-              <div className="flex flex-row my-6 gap-4">
-                <Button className="flex items-center justify-center cursor-default px-12 py-7 text-lg text-white bg-blue-700 rounded hover:bg-blue-700">
-                  <span className="font-bold text-3xl mr-2">
-                    {media.seasons}
-                  </span>
-                  {media.seasons <= 1 ? "Saison" : "Saisons"}
-                </Button>
-                <Button className="flex items-center justify-center cursor-default px-12 py-7 text-lg text-black bg-orange-500 rounded hover:bg-orange-500">
-                  <span className="font-bold text-3xl mr-2">
-                    {media.episodes}
-                  </span>
-                  Épisodes
-                </Button>
+              <div>
+                <span className="text-lg text-slate-400">
+                  {media.year} -{" "}
+                  {media.yearEnd ? (
+                    media.yearEnd
+                  ) : (
+                    <span className="italic">en cours...</span>
+                  )}
+                </span>
+
+                <div className="flex flex-row my-6 gap-3">
+                  <Button className="flex items-center justify-center cursor-default px-8 py-6 text-lg text-white bg-blue-700 rounded hover:bg-blue-700">
+                    <span className="font-bold text-2xl mr-2">
+                      {media.seasons}
+                    </span>
+                    {media.seasons <= 1 ? "Saison" : "Saisons"}
+                  </Button>
+                  <Button className="flex items-center justify-center cursor-default px-8 py-6 text-lg text-black bg-orange-500 rounded hover:bg-orange-500">
+                    <span className="font-bold text-2xl mr-2">
+                      {media.episodes}
+                    </span>
+                    Épisodes
+                  </Button>
+                </div>
               </div>
             )}
+            <p className="text-lg my-6">{media.synopsis}</p>
+
             <div>
               <div>
                 <span className="kalam-bold text-xl text-orange-500 my-2">

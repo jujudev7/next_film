@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [pathname]); // Mettre à jour l'état lorsque le chemin change
 
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mr-2">
       <Link href="/">
         <h1 className="text-3xl text-center font-bold mb-3">
           <Image
