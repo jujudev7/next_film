@@ -32,7 +32,38 @@ const createFile = async (filePath: string, content: string) => {
 
 // Fonction pour obtenir le nom du dossier à partir du nom du fichier poster
 const getFolderName = (posterName: string) => {
-  return posterName.replace(".jpg", "").toLowerCase();
+  return posterName.replace(/\.(jpg|webp)$/, "").toLowerCase();
+};
+
+// Fonction pour générer le contenu des pages
+const generatePageContent = (
+  title: string,
+  synopsis: string,
+  category: string
+) => {
+  return `
+import MediaDetail from "@/app/components/MediaDetail";
+import type { Metadata } from "next";
+
+// Fonction pour tronquer le texte
+const truncateText = (text: string, maxLength: number) => {
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+};
+
+// Définir les métadonnées pour la page
+export function generateMetadata(): Metadata {
+  return {
+    title: "${category} ${title}",
+    description: truncateText("${synopsis}", 155),
+  };
+}
+
+export default function ${title.replace(/[^a-zA-Z0-9]/g, "")}Page() {
+  return (
+    <MediaDetail />
+  );
+}
+`;
 };
 
 const generatePages = async () => {
@@ -49,13 +80,11 @@ const generatePages = async () => {
       safeFolderName,
       "page.tsx"
     );
-    const movieContent = `
-import MediaDetail from "@/app/components/MediaDetail";
-
-export default function ${movie.title.replace(/[^a-zA-Z0-9]/g, "")}Page() {
-  return <MediaDetail title="${movie.title}" />;
-}
-`;
+    const movieContent = generatePageContent(
+      movie.title,
+      movie.synopsis,
+      "film"
+    );
     await createFile(moviePath, movieContent);
   }
 
@@ -69,13 +98,11 @@ export default function ${movie.title.replace(/[^a-zA-Z0-9]/g, "")}Page() {
       safeFolderName,
       "page.tsx"
     );
-    const serieContent = `
-import MediaDetail from "@/app/components/MediaDetail";
-
-export default function ${serie.title.replace(/[^a-zA-Z0-9]/g, "")}Page() {
-  return <MediaDetail title="${serie.title}" />;
-}
-`;
+    const serieContent = generatePageContent(
+      serie.title,
+      serie.synopsis,
+      "serie"
+    );
     await createFile(seriePath, serieContent);
   }
 
