@@ -19,11 +19,7 @@ const LazyMediaList = ({ media }: LazyMediaListProps) => {
   const lastElementRef = useRef<HTMLDivElement>(null); // Ref pour l'élément final
 
   useEffect(() => {
-    const currentObserver = observerRef.current;
-
-    const lastElement = lastElementRef.current; // Crée une copie locale de la valeur du ref
-
-    if (!currentObserver) {
+    if (!observerRef.current) {
       observerRef.current = new IntersectionObserver(
         (entries) => {
           const lastEntry = entries[0];
@@ -36,15 +32,18 @@ const LazyMediaList = ({ media }: LazyMediaListProps) => {
       );
     }
 
+    const currentObserver = observerRef.current;
+    const lastElement = lastElementRef.current; // Crée une copie locale de la valeur du ref
+
     // Si le dernier élément est observé, démarrer l'observation
-    if (lastElement) {
-      observerRef.current.observe(lastElement);
+    if (lastElement && currentObserver) {
+      currentObserver.observe(lastElement);
     }
 
     return () => {
       // Utiliser la valeur locale dans la fonction de nettoyage
-      if (lastElement) {
-        observerRef.current?.unobserve(lastElement);
+      if (lastElement && currentObserver) {
+        currentObserver.unobserve(lastElement);
       }
     };
   }, []);
