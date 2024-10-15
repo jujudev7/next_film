@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@font-face {
+  font-family: "Kalam Bold";
+  src: url("/fonts/Kalam-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.kalam-light {
+/* .kalam-light {
   font-family: "Kalam", cursive;
   font-weight: 300;
   font-style: normal;
@@ -14,10 +19,10 @@
   font-family: "Kalam", cursive;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 .kalam-bold {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam Bold", cursive;
   font-weight: 700;
   font-style: normal;
 }
