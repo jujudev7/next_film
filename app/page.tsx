@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import MediaList from "./components/MediaList";
+import LazyMediaList from "./components/LazyMediaList";
 import { useMedia } from "./context/MediaContext"; // Importation du contexte
 import movies from "./data/movies-infos";
 import series from "./data/series-infos";
@@ -44,7 +44,7 @@ export default function Home() {
     <main className="max-w-[1200px] mx-auto pt-2">
       <div className="mx-4">
         <div className="flex flex-row justify-between items-center"></div>
-        <MediaList media={displayedMedia} />
+        <LazyMediaList media={displayedMedia} />
       </div>
     </main>
   );
