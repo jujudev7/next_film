@@ -4,7 +4,7 @@ export type Serie = {
   title: string;
   synopsis: string;
   poster: string;
-  duration?: string;
+  duration: string;
   year: number;
   yearEnd?: number;
   director: string[];
@@ -26,6 +26,7 @@ const series: Serie[] = [
     episodes: 60,
     year: 2002,
     yearEnd: 2008,
+    duration: "58 min",
     director: ["David Simon, Ed Burns"],
     actors: [
       "Dominic West",
@@ -47,6 +48,7 @@ const series: Serie[] = [
     episodes: 18,
     year: 2017,
     yearEnd: 2020,
+    duration: "42 min",
     director: ["Andrew Sodroski", "Jim Clemente", "Tony Gittelson"],
     actors: [
       "Sam Worthington",
@@ -69,6 +71,7 @@ const series: Serie[] = [
     episodes: 56,
     year: 1997,
     yearEnd: 2003,
+    duration: "55 min",
     director: ["Tom Fontana"],
     actors: [
       "Terry Kinney",
@@ -91,7 +94,8 @@ const series: Serie[] = [
     seasons: 2,
     episodes: 19,
     year: 2022,
-    yearEnd: "",
+    // yearEnd:,
+    duration: "40 - 57 min",
     director: ["Ben Stiller"],
     actors: [
       "Adam Scott",
@@ -114,6 +118,7 @@ const series: Serie[] = [
     episodes: 41,
     year: 2016,
     yearEnd: 2022,
+    duration: "30 min",
     director: ["Donald Glover"],
     actors: [
       "Donald Glover",
@@ -134,6 +139,7 @@ const series: Serie[] = [
     episodes: 36,
     year: 2013,
     yearEnd: 2022,
+    duration: "56 min",
     director: ["Steven Knight"],
     actors: [
       "Cillian Murphy",
@@ -158,6 +164,7 @@ const series: Serie[] = [
     episodes: 86,
     year: 1999,
     yearEnd: 2007,
+    duration: "50 - 60 min",
     director: ["David Chase"],
     actors: [
       "James Gandolfini",
@@ -181,6 +188,7 @@ const series: Serie[] = [
     episodes: 188,
     year: 2005,
     yearEnd: 2013,
+    duration: "22 min",
     director: ["Greg Daniels", "Ricky Gervais", "Stephen Merchant"],
     actors: ["Steve Carell", "Rainn Wilson", "John Krasinski", "Jenna Fischer"],
     category: "serie",
@@ -196,6 +204,8 @@ const series: Serie[] = [
     episodes: 34,
     year: 2020,
     yearEnd: 2023,
+    duration: "30 min",
+
     director: ["Brendan Hunt", "Joe Kelly", "Bill Lawrence"],
     actors: [
       "Jason Sudeikis",
@@ -221,6 +231,7 @@ const series: Serie[] = [
     episodes: 27,
     year: 2017,
     yearEnd: 2020,
+    duration: "9 - 17 min",
     director: ["Timothée Hochet"],
     actors: [
       "Voix de : Mathieu Kassovitz",
@@ -242,6 +253,7 @@ const series: Serie[] = [
     episodes: 18,
     year: 2018,
     yearEnd: 2020,
+    duration: "54 min",
     director: ["Laeta Kalogridis"],
     actors: [
       "Joel Kinnaman",
@@ -283,7 +295,7 @@ const series: Serie[] = [
     poster: "squid-game.jpg",
     duration: "50-60 min",
     seasons: 3,
-    episodes: "? (S01: 9)",
+    episodes: 9,
     year: 2021,
     yearEnd: 2025,
     director: ["Hwang Dong-hyuk"],
@@ -307,6 +319,8 @@ const series: Serie[] = [
     episodes: 10,
     year: 2018,
     yearEnd: 2018,
+    duration: "40 min",
+
     director: ["Cary Joji Fukunaga", "Patrick Somerville"],
     actors: ["Emma Stone", "Jonah Hill", "Justin Theroux", "Sonoya Mizuno"],
     category: "serie",
@@ -386,7 +400,7 @@ const series: Serie[] = [
     seasons: 3,
     episodes: 29,
     year: 2022,
-    yearEnd: "",
+    // yearEnd: ,
     director: ["Christopher Storer"],
     actors: [
       "Jeremy Allen White",
@@ -498,7 +512,7 @@ const series: Serie[] = [
     title: "Criminal: Royaume-Uni",
     synopsis:
       "Plongée au cœur des salles d'interrogatoire, où l'on suit à chaque épisode les confrontations tendues entre suspects et enquêteurs. Cette série policière est à l'échelle européenne existe aussi Criminal: Allemagne, Espagne et France.",
-    poster: "criminal.jpg",
+    poster: "criminal-royaume-uni.jpg",
     duration: "40-45 min",
     seasons: 2,
     episodes: 7,
@@ -704,7 +718,7 @@ const series: Serie[] = [
     seasons: 7,
     episodes: 33,
     year: 2011,
-    yearEnd: "",
+    // yearEnd: ,
     director: ["Charlie Brooker"],
     actors: [
       "Rory Kinnear",

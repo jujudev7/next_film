@@ -10,14 +10,17 @@ import series from "../data/series-infos";
 type Media = {
   title: string;
   year: number;
+  yearEnd?: number;
   duration: string;
   poster: string;
   actors: string[];
   director: string[];
   category: string;
   synopsis: string;
-  seasons: number;
-  episodes: number;
+  seasons?: number;
+  episodes?: number;
+  tags: string[];
+  genre: string;
 };
 
 const MediaDetail = () => {
@@ -85,12 +88,14 @@ const MediaDetail = () => {
                 </span>
 
                 <div className="flex flex-row my-6 gap-3">
-                  <Button className="flex items-center justify-center cursor-default px-8 py-6 text-lg text-white bg-blue-700 rounded hover:bg-blue-700">
-                    <span className="font-bold text-2xl mr-2">
-                      {media.seasons}
-                    </span>
-                    {media.seasons <= 1 ? "Saison" : "Saisons"}
-                  </Button>
+                  {media.seasons !== undefined && (
+                    <Button className="flex items-center justify-center cursor-default px-8 py-6 text-lg text-white bg-blue-700 rounded hover:bg-blue-700">
+                      <span className="font-bold text-2xl mr-2">
+                        {media.seasons}
+                      </span>
+                      {media.seasons <= 1 ? "Saison" : "Saisons"}
+                    </Button>
+                  )}
                   <Button className="flex items-center justify-center cursor-default px-8 py-6 text-lg text-black bg-orange-500 rounded hover:bg-orange-500">
                     <span className="font-bold text-2xl mr-2">
                       {media.episodes}

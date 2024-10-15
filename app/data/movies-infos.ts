@@ -207,7 +207,7 @@ const movies: Movie[] = [
     actors: ["Vincent Cassel", "Saïd Taghmaoui", "Hubert Koundé"],
     category: "film",
     genre: "Drame",
-    tags: ["émeute", "société", "intense", ],
+    tags: ["émeute", "société", "intense"],
   },
   {
     title: "La Ligne Verte",
@@ -407,7 +407,7 @@ const movies: Movie[] = [
   {
     title: "Un p'tit truc en plus",
     synopsis:
-      'En cavale après un braquage raté, Paulo et son père "La Fraise", se cachent dans une colonie de vacances pour jeunes en situation de handicap, en se faisant passer pour un pensionnaire et son éducateur. Au fil des jours, ils vivent une expérience humaine bouleversante qui les transforme profondément.',
+      'En cavale après un braquage raté, Paulo et son père se cachent dans une colonie de vacances pour jeunes en situation de handicap, en se faisant passer pour un pensionnaire et son éducateur. Au fil des jours, ils vivent une expérience humaine bouleversante qui les transforme profondément.',
     poster: "un-ptit-truc-en-plus.jpg",
     duration: "1h30",
     year: 2024,
