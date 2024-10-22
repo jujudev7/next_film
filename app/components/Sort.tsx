@@ -25,10 +25,10 @@ export function Sort({ onSortChange }: SortProps) {
   };
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex gap-2 sm:gap-4 mr-4">
       <Button
         onClick={() => handleSortChange("films")}
-        className={`flex items-center justify-center px-4 py-2 text-black rounded transition 
+        className={`flex items-center justify-center h-7 sm:h-9 px-2 sm:px-4 text-sm text-black rounded transition 
           ${
             activeButton === "films"
               ? "bg-blue-600 text-white hover:bg-blue-700"
@@ -40,7 +40,7 @@ export function Sort({ onSortChange }: SortProps) {
       </Button>
       <Button
         onClick={() => handleSortChange("series")}
-        className={`flex items-center justify-center px-4 py-2 text-black rounded transition 
+        className={`flex items-center justify-center h-7 sm:h-9 px-2 sm:px-4 text-sm text-black rounded transition 
           ${
             activeButton === "series"
               ? "bg-blue-600 text-white hover:bg-blue-700"

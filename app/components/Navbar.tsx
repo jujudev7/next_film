@@ -28,7 +28,7 @@ const Navbar = () => {
             alt="Nextfilm"
             width={220}
             height={69}
-            className="sm:ml-0 hover:scale-105"
+            className="ml-4 w-[170px] h-auto sm:w-[220px] sm:h-[69px] hover:scale-105"
             priority
           />
         </h1>
