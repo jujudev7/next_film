@@ -79,11 +79,11 @@ const MediaDetail = () => {
             {media.category === "serie" && (
               <div>
                 <span className="text-lg text-slate-400">
-                  {media.year} -{" "}
-                  {media.yearEnd ? (
-                    media.yearEnd
-                  ) : (
-                    <span className="italic">en cours...</span>
+                  {media.year}
+                  {media.yearEnd && media.yearEnd !== media.year ? (
+                    <> - {media.yearEnd}</>
+                  ) : media.yearEnd === media.year ? null : (
+                    <span className="italic"> - en cours...</span>
                   )}
                 </span>
 
