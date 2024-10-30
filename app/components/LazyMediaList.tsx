@@ -13,7 +13,7 @@ type LazyMediaListProps = {
 };
 
 const LazyMediaList = ({ media }: LazyMediaListProps) => {
-  const [visibleItems, setVisibleItems] = useState(4); // Nombre d'items à afficher initialement
+  const [visibleItems, setVisibleItems] = useState(8); // Nombre d'items à afficher initialement
   const observerRef = useRef<IntersectionObserver | null>(null); // Observer ref
 
   const lastElementRef = useRef<HTMLDivElement>(null); // Ref pour l'élément final
