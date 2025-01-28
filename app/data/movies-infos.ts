@@ -860,7 +860,7 @@ const movies: Movie[] = [
     actors: ["Claude Baechtold", "Serge Michel", "Paolo Woods"],
     category: "film",
     genre: "Documentaire",
-    tags: ["documentaire", "guerre", "Afghanistan", "journalisme"],
+    tags: ["documentaire", "Afghanistan", "journalisme"],
   },
 ];
 
